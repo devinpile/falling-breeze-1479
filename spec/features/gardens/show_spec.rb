@@ -28,5 +28,10 @@ RSpec.describe "Garden Show Page" do
       expect(page).to have_content(@plant3.name)
       expect(page).to_not have_content(@plant4.name)
     end
+
+    xit 'lists order, from most to least, the most appearances by plant in plot and garden' do
+      expect(@plant3).to appear_before(@plant4)
+      expect(@plant1).to appear_before(@plant2)
+    end
   end
 end
