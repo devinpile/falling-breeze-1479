@@ -36,8 +36,8 @@ RSpec.describe "Plot Index Page" do
       within "#plot-#{@plot1.id}" do
         expect(page).to have_content(@plant1.name)
 
+        save_and_open_page
         click_link "Remove #{@plant1.name}"
-
         expect(page).to_not have_content(@plant1.name)
       end
     end
